@@ -14,13 +14,13 @@ namespace Nancy.Docs
                 //TODO: Get page identifiers and merge to collection
 
                 var data = routeCacheProvider
-                        .GetCache()
-                        .RetrieveMetadata<DocsRouteData>()
-                        .Where(x=>!string.IsNullOrWhiteSpace(x.ResourcePath));
-                        //.GroupBy(x => x.ResourcePath)
-                           //.Select(x=> new{Name=x.Key, Link="/docs/"+x.Key});
-                           //.OfType<DocsRouteData>()
-                        //.ToList(); // filter nulls
+                    .GetCache()
+                    .RetrieveMetadata<DocsRouteData>()
+                    .OfType<DocsRouteData>() //filter nulls
+                    .GroupBy(x => x.ResourcePath)
+                    .Select(x => new {Name = x.Key, Link = "/docs" + x.Key})
+                    .ToList();
+
                 return Response.AsJson(data);
             };
 
@@ -36,9 +36,9 @@ namespace Nancy.Docs
 
     public interface IPageIdentifier
     {
-        string Name{ get; set; }
+        string Name { get; set; }
 
-        string Path{ get; set; }
+        string Path { get; set; }
         //or use name as path to markdown
     }
 }

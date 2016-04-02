@@ -22,7 +22,7 @@ namespace Nancy.Docs.Demo
         {
             base.ApplicationStartup(container, pipelines);
 
-            Json.JsonSettings.MaxJsonLength = int.MaxValue;
+            ServiceStack.Text.JsConfig.ExcludeTypeInfo = true;
 
             pipelines.OnError += (ctx, ex) => {
                 return null;
