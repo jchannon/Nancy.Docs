@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CommonMark;
 using Nancy.Routing;
 
 namespace Nancy.Docs
@@ -64,8 +63,8 @@ namespace Nancy.Docs
                 }
 
                 var md = File.ReadAllText(pageData.Path);
-                var html = CommonMarkConverter.Convert(md);
-                return Response.AsText(html).WithContentType("text/html; charset=UTF-8");
+                var data = new {Markdown = md};
+                return Response.AsJson(data);
             };
         }
     }
