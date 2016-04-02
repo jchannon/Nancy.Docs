@@ -69,4 +69,4 @@ Nancy.Docs brings a solution to how to document your API. It builds on top of th
 	}
 }
 ```
-`Get["/pages/{pagename}"]` so usage of `docs/pages/about` renders converted markdown to HTML`
+`Get["/pages/{pagename}"]` so usage of `docs/pages/about` renders converted markdown to HTML
