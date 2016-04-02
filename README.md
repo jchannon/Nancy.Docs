@@ -25,7 +25,7 @@ Navigating to `/docs` in your app will return links to documentation for resourc
 ]
 ```
 
-`Get["/api/{resourcepath}"]` so usage of `/docs/api/users` will return:
+`Get["/api/{resourcepath}"]` : navigating to `/docs/api/users` will return:
 
 ```
 {
@@ -90,7 +90,7 @@ Navigating to `/docs` in your app will return links to documentation for resourc
 	}
 }
 ```
-`Get["/pages/{pagename}"]` so usage of `docs/pages/FAQ` will return:
+`Get["/pages/{pagename}"]` : navigating to `docs/pages/FAQ` will return:
 
 ```
 {"markdown":"# FAQ\r\n\r\nThis is the `FAQ` page"}
