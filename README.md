@@ -90,4 +90,4 @@ Navigating to `/docs` in your app will return links to documentation for resourc
 	}
 }
 ```
-`Get["/pages/{pagename}"]` so usage of `docs/pages/about` renders converted markdown to HTML
+`Get["/pages/{pagename}"]` so usage of `docs/pages/FAQ` renders converted markdown to HTML
