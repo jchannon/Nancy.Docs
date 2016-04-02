@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Nancy.Docs brings a solution to how to document your API. It builds on top of the idea of Swagger in which you can document route information such as the possible response codes, required body and response body.  This library takes this one step further and allows you to have documentation separate from route information.  This library also allows you to have sections for each resource.  So for example you can have a generic page of documentation which you write in Markdown, you can have a page of information about each route for a resource or you can have a page of information about each route for a resource as well as multiple notes that you may want to include, again these are written in Markdown.  Please run the [demo](https://github.com/jchannon/Nancy.Docs/tree/master/Nancy.Docs.Demo) to see this in action.
+Nancy.Docs brings a solution to how to document your API. It builds on top of the idea of Swagger in which you can document route information such as the possible response codes, required body and response body.  This library takes this one step further and allows you to have documentation separate from route information.  This library also allows you to have section documentation for each resource.  So for example you can have a generic page of documentation which you write in Markdown, you can have a page of information about each route for a resource or you can have a page of information about each route for a resource as well as multiple documentation sections that you may want to include, again these are written in Markdown.  Please run the [demo](https://github.com/jchannon/Nancy.Docs/tree/master/Nancy.Docs.Demo) to see this in action.
 
 ###Usage
 
