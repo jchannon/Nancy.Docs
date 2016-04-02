@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Nancy.Bootstrapper;
+﻿using Nancy.Bootstrapper;
 
 namespace Nancy.Docs
 {
@@ -11,7 +6,7 @@ namespace Nancy.Docs
     {
         public DocsRegistrations()
         {
-            Register<IPageIdentifier>();
+            RegisterAll<IPageIdentifier>();
         }
     }
 }

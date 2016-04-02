@@ -50,7 +50,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FAQPage.cs" />
+    <Compile Include="FaqPageIdentifier.cs" />
+    <Compile Include="HowToPageIdentifier.cs" />
     <Compile Include="MyBootstrapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +65,15 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="StaticDocs\faq.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="StaticDocs\howto.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="StaticDocs\ResourceDocs\users\intro.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="StaticDocs\ResourceDocs\users\other.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

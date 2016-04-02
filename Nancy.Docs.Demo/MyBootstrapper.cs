@@ -1,5 +1,3 @@
-using Nancy.TinyIoc;
-
 namespace Nancy.Docs.Demo
 {
     public class MyBootstrapper : DefaultNancyBootstrapper
@@ -17,12 +15,6 @@ namespace Nancy.Docs.Demo
             {
                 return null;
             };
-        }
-
-        protected override void ConfigureApplicationContainer(TinyIoCContainer container)
-        {
-            base.ConfigureApplicationContainer(container);
-            container.Register<IPageIdentifier, FAQPage>();
         }
     }
 }

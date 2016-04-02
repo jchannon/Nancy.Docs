@@ -28,6 +28,10 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonMark, Version=0.1.0.0, Culture=neutral, PublicKeyToken=001ef8810438905d, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonMark.NET.0.11.0\lib\net45\CommonMark.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="Nancy">
@@ -36,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DocsRegistrations.cs" />
-    <Compile Include="MyClass.cs" />
+    <Compile Include="DocsRouteDataWithNotes.cs" />
+    <Compile Include="IPageIdentifier.cs" />
+    <Compile Include="DocsExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseMessage.cs" />
     <Compile Include="ParameterType.cs" />
