@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{211DA443-6F4C-4144-B768-719A39816F92}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Nancy.Docs.Demo</RootNamespace>
+    <AssemblyName>Nancy.Docs.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Nancy">
+      <HintPath>..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self">
+      <HintPath>..\packages\Nancy.Hosting.Self.1.4.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Metadata.Modules">
+      <HintPath>..\packages\Nancy.Metadata.Modules.1.4.1\lib\net40\Nancy.Metadata.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Validation.DataAnnotations">
+      <HintPath>..\packages\Nancy.Validation.DataAnnotations.1.4.1\lib\net40\Nancy.Validation.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.3.9.11\lib\net35\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Serialization.ServiceStack">
+      <HintPath>..\packages\Nancy.Serialization.ServiceStack.1.4.1\lib\net40\Nancy.Serialization.ServiceStack.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HomeModule.cs" />
+    <Compile Include="HomeMetadataModule.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="Address.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nancy.Docs\Nancy.Docs.csproj">
+      <Project>{CA15F93F-0DC1-4FA1-B72A-3A8E7B9BF6CE}</Project>
+      <Name>Nancy.Docs</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

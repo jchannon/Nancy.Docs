@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Docs", "Nancy.Docs\Nancy.Docs.csproj", "{CA15F93F-0DC1-4FA1-B72A-3A8E7B9BF6CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Docs.Demo", "Nancy.Docs.Demo\Nancy.Docs.Demo.csproj", "{211DA443-6F4C-4144-B768-719A39816F92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{211DA443-6F4C-4144-B768-719A39816F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211DA443-6F4C-4144-B768-719A39816F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211DA443-6F4C-4144-B768-719A39816F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211DA443-6F4C-4144-B768-719A39816F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA15F93F-0DC1-4FA1-B72A-3A8E7B9BF6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA15F93F-0DC1-4FA1-B72A-3A8E7B9BF6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA15F93F-0DC1-4FA1-B72A-3A8E7B9BF6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA15F93F-0DC1-4FA1-B72A-3A8E7B9BF6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

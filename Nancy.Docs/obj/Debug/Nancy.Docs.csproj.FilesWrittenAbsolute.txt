@@ -1,0 +1,6 @@
+/Users/jonathan/Projects/Nancy.Docs/Nancy.Docs/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/jonathan/Projects/Nancy.Docs/Nancy.Docs/bin/Debug/Nancy.Docs.dll.mdb
+/Users/jonathan/Projects/Nancy.Docs/Nancy.Docs/bin/Debug/Nancy.Docs.dll
+/Users/jonathan/Projects/Nancy.Docs/Nancy.Docs/obj/Debug/Nancy.Docs.dll
+/Users/jonathan/Projects/Nancy.Docs/Nancy.Docs/obj/Debug/Nancy.Docs.dll.mdb
+/Users/jonathan/Projects/Nancy.Docs/Nancy.Docs/bin/Debug/Nancy.dll
