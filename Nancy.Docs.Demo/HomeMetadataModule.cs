@@ -32,7 +32,7 @@ namespace Nancy.Docs.Demo
                     with.Response(201, "Created a User");
                     with.Response(422, "Invalid input");
                     with.Model<User>();
-                    with.BodyParam<User>("A User object", required: true);
+                    with.BodyParam<User>("A User object", required: true, defaultValue:new User() {Age = 21, Name = "fred"});
                     with.Notes("Creates a user with the shown schema for our awesome app");
                 });
 

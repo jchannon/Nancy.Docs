@@ -1,33 +1,48 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Nancy.Routing;
 
 namespace Nancy.Docs
 {
     public class DocsModule : NancyModule
     {
-        public DocsModule(IRouteCacheProvider routeCacheProvider)
+        public DocsModule(IRouteCacheProvider routeCacheProvider, IEnumerable<IPageIdentifier> pageIdentifiers )
             : base("/docs")
         {
-            //TODO: Group by resource path
+            
             Get["/"] = _ =>
             {
                 //TODO: Get page identifiers and merge to collection
+                var pagedata = pageIdentifiers.Select(x => new {Name = x.Name, Link = x.Path});
 
                 var data = routeCacheProvider
                     .GetCache()
                     .RetrieveMetadata<DocsRouteData>()
                     .OfType<DocsRouteData>() //filter nulls
                     .GroupBy(x => x.ResourcePath)
-                    .Select(x => new {Name = x.Key, Link = "/docs" + x.Key})
-                    .ToList();
+                    .Select(x => new {Name = x.Key, Link = "/docs" + x.Key});
 
-                return Response.AsJson(data);
+                var merged = pagedata.Concat(data);
+
+                return Response.AsJson(merged);
             };
 
             //TODO: use pageidentifier or sectionidentifier to allow notes on a resourcepath
 
-            //TODO: return DocsRouteData for resourcepath 
-            //Get["/{resourcepath}"]
+            
+            Get["/{resourcepath}"] = parameters =>
+            {
+                var ff = parameters.resourcepath;
+
+                var data = routeCacheProvider
+                    .GetCache()
+                    .RetrieveMetadata<DocsRouteData>()
+                    .OfType<DocsRouteData>() //filter nulls
+                    .Where(x => x.ResourcePath == "/" + ff)
+                    .ToList();
+
+                return Response.AsJson(data);
+            };
 
             //TODO: return IPageIdentifier contents for ipageidentifier 
             //Get["/{pageidentifiername}"]
@@ -36,7 +51,7 @@ namespace Nancy.Docs
 
     public interface IPageIdentifier
     {
-        string Name { get; set; }
+        string Name { get;  }
 
         string Path { get; set; }
         //or use name as path to markdown
