@@ -8,7 +8,7 @@ namespace Nancy.Docs.Demo
 
             ServiceStack.Text.JsConfig.ExcludeTypeInfo = true;
             ServiceStack.Text.JsConfig.EmitCamelCaseNames = true;
-            ServiceStack.Text.JsConfig.IncludeNullValues = false;
+            ServiceStack.Text.JsConfig.IncludeNullValues = true;
 
 
             pipelines.OnError += (ctx, ex) =>
