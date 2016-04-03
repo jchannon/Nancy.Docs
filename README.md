@@ -31,12 +31,16 @@ Navigating to `/docs` in your app will return links to documentation for resourc
 {
 	"routeData": [{
 		"consumes": [],
+		"model": null,
 		"produces": [],
 		"responseMessages": [{
 			"code": 200,
-			"message": "Everything will be OK"
+			"message": "Everything will be OK",
+			"responseModel": null
 		}],
 		"parameters": [],
+		"notes": null,
+		"summary": null,
 		"apiPath": "/",
 		"resourcePath": "/users",
 		"name": "HomeRoute",
@@ -59,10 +63,12 @@ Navigating to `/docs` in your app will return links to documentation for resourc
 		"produces": [],
 		"responseMessages": [{
 			"code": 201,
-			"message": "Created a User"
+			"message": "Created a User",
+			"responseModel": null
 		}, {
 			"code": 422,
-			"message": "Invalid input"
+			"message": "Invalid input",
+			"responseModel": null
 		}],
 		"parameters": [{
 			"name": "body",
@@ -73,7 +79,9 @@ Navigating to `/docs` in your app will return links to documentation for resourc
 				"name": "fred",
 				"age": 21,
 				"dateOfBirth": "\/Date(-62135596800000+0000)\/",
-				"role": "User"
+				"address": null,
+				"role": "User",
+				"tags": null
 			},
 			"parameterModel": "Nancy.Docs.Demo.User, Nancy.Docs.Demo"
 		}],
